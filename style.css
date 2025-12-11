@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* some supporting classes */
 .flex{
     display: flex;
@@ -24,47 +28,83 @@
     margin: 1vw;
     padding: 2px;
 }
+#playbtn{
+    width: 6vh;
+    height: 6vh;
+    position: absolute;
+    top:18vh;
+    right: 2vh ;
+    opacity:0;
+    transition: all 0.25s ease-in;
+}
+
 #home{
     width: 3vh;
     height: 3vh;
     margin-left: 2px;
     margin-right: 0;
     padding: 2px;
+    cursor: pointer;
 }
 #search{
      width: 3vh;
     height: 3vh;
     margin: 2px;
     padding: 2px;
+    cursor: pointer;
 }
 #plus{
-     width: 2vh;
+    width: 2vh;
     height: 2vh;
     margin: 2px;
     padding: 2px;
+    cursor: pointer;
 }
 #world{
      width: 1vw;
     height: 1vw;
     margin: 2px;
     padding: 2px;
+    cursor: pointer;
 }
 #install{
       width: 1vw;
     height: 1vw;
     margin: 4px;
     padding: 4px;
+    cursor: pointer;
 }
 #browse{
      width: 3vh;
     height: 3vh;
+    cursor: pointer;
+}
+#playbtn2{
+    width: 4vh;
+    height: 4vh;
+}
+#prvbtn{
+    width: 3vh;
+    height: 3vh;
+}
+#nxtbtn{
+    width: 3vh;
+    height: 3vh;
+    transform: scaleY(-1);
+    transform-origin: center;
 }
 #lib_head{
     justify-content: space-between;
     margin: 2vw;
+    
 }
 #lib_head div{
     font-size: 2vh;
+}
+#parent_plus{
+    width: 3vh;
+    height: 3vh ;
+    border-radius: 50%;
 }
 
 
@@ -109,8 +149,8 @@
 }
 /* fit home in circle */
 #parent_home{
-    width: 5vh;
-    height: 5vh;
+    width: 6vh;
+    height: 6vh;
     background-color: rgb(35, 34, 34);
     border-radius: 50%;
     justify-content: center;
@@ -131,18 +171,19 @@
     text-decoration: none;
 }
 .navbar21 a{
-    color: white;
+    color: rgb(183, 180, 180);
     font-size: 2vh;
     font-weight: 700;
     gap: 1vh;
 }
 .navbar22 a{ 
     font-size: 1vw;
-    color: white;
+    color: rgb(183, 180, 180);
 }
 .navbar21{
     gap: 1vh;
 }
+    
 .navbar22{
     gap: 2vh;
 }
@@ -208,7 +249,7 @@
 }
 .lib_links a{
     text-decoration: none;
-    color: white;
+    color: rgb(183, 180, 180);
     font-size: 10px;
     margin: 2vw 1vh;
     padding: 1vh;
@@ -224,7 +265,7 @@
     width: 7vw;
     height: 3vh;
     background-color: black;
-    border: 1px solid white;
+    border: 1px solid rgb(107, 106, 106);
     border-radius: 25px;
     color: white;
     justify-content: center;
@@ -245,8 +286,8 @@
     position: fixed;
     right: 1vh;
     top: 4vw;
-    height: 200vh;
-    overflow-y: auto;
+    max-height: 85vh;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 .heading{
@@ -256,7 +297,7 @@
     font-weight: bolder;
 }
 .trendingsongs{
-    overflow-x: auto; 
+    overflow-x: scroll; 
     width: 68vw;
     height: 35vh;
    padding-left: 1vw;
@@ -269,21 +310,23 @@
     padding: 1vh;
     border-radius: 5px;
     background-color: r(17, 17, 17);
+    position: relative;
+    cursor: pointer;
 }
 .img_fit1{
     width: 12vw ;
     height: 20vh ;
     border-radius: 10px;
-   
 }
 .img_fit1 img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: contain;
+
 }
 .popularartists{
-    overflow-x: auto; 
+    overflow-x: scroll; 
     width: 68vw;
     height: 35vh;
    padding-left: 1vw;
@@ -297,6 +340,8 @@
     padding: 1vh;
     border-radius: 5px;
     background-color: r(17, 17, 17);
+    position: relative;
+    cursor: pointer;
 }
 
 .img_fit2{
@@ -319,9 +364,11 @@
     padding: 0;
 }
 .card2 p{
+    display: flex;
     margin: 1vw 1vh 0 1vh;
     padding: 0;
     font-size: 12px;
+    flex-wrap: wrap;
 }
 
 .empty2{
@@ -329,6 +376,25 @@
     background-color: rgb(17, 17, 17);
 }
 
+
+/* footer playbar  */
+.playbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: black ;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-top: 1vh;
+}
+.songbtns{
+    justify-content: center;
+    gap: 5vh;
+    margin: 1vw;
+}
+.looklikeplay{
+    justify-content: center;
+}
 
 
 
@@ -346,4 +412,69 @@ body{
     background-color: black;
     color: white;
      
+}
+
+/* mouse gestures */
+
+.card2:hover {
+    background-color: rgb(70, 69, 69);
+}
+.card2:hover #playbtn {
+    top: 14vh;
+    opacity: 1;
+}
+ .card3:hover{
+    background-color:rgb(70, 69, 69) ;
+ }
+ .card3:hover #playbtn {
+    top: 14vh;
+    opacity: 1;
+}
+.card3:hover .img_fit2{
+    border: 1px solid rgb(70, 69, 69) ;
+}
+.navbar21 a:hover{
+    transform: scale(1.04);
+    color: white;
+}
+.navbar22 a:hover{
+    transform: scale(1.04);
+    color: white;
+}
+.loginbtn:hover{
+    background-color:rgb(220, 219, 219) ;
+    transform: scale(1.04); 
+}
+#browse:hover{
+    transform: scale(1.05);
+}
+#search:hover{
+    transform: scale(1.05);
+}
+.searchbar:hover{
+    border: 1px solid rgb(211, 211, 211);
+    background-color: rgb(56, 55, 55);
+}
+.searchbar:hover #typebox{
+    background-color: rgb(56, 55, 55);
+}
+.btn1:hover{
+    transform: scale(1.05);
+    background-color: rgb(222, 221, 221);
+}
+.btn2:hover{
+    transform: scale(1.05);
+    border: 1px solid white;
+}
+.lib_links a:hover{
+    text-decoration: underline;
+    color: white;
+}
+#parent_home:hover{
+    transform: scale(1.05);
+    background-color: rgb(54, 54, 55);
+
+}
+#parent_plus:hover{
+    background-color: rgb(54, 54, 55);
 }

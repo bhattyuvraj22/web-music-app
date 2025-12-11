@@ -1,0 +1,20 @@
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;       /* adjust as needed */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #d3d3d3;   /* light grey track */
+}
+
+/* Scrollbar thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+  background: #555555;   /* dark grey */
+  border-radius: 10px;   /* smooth rounded edges */
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;   /* even darker grey */
+}
