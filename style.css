@@ -28,22 +28,9 @@
     margin: 1vw;
     padding: 2px;
 }
-#playbtn{
-    width: 6vh;
-    height: 6vh;
-    position: absolute;
-    top:18vh;
-    right: 2vh ;
-    opacity:0;
-    transition: all 0.25s ease-in;
-}
-
 #home{
     width: 3vh;
     height: 3vh;
-    margin-left: 2px;
-    margin-right: 0;
-    padding: 2px;
     cursor: pointer;
 }
 #search{
@@ -79,19 +66,48 @@
     height: 3vh;
     cursor: pointer;
 }
+#sound{width: 2vh;
+    height: 2vh;
+    cursor: pointer;
+}
+#insta{
+    width: 2vw;
+    height: 2vw;
+    padding: 1vw;
+}
+#twitter{
+    width: 2vw;
+    height: 2vw;
+    padding: 1vw;
+}
+#facebook{
+    width: 2vw;
+    height: 2vw;
+    padding: 1vw;
+}
 #playbtn2{
     width: 4vh;
     height: 4vh;
+    cursor: pointer;
 }
 #prvbtn{
     width: 3vh;
     height: 3vh;
+    cursor: pointer;
 }
 #nxtbtn{
     width: 3vh;
     height: 3vh;
     transform: scaleY(-1);
     transform-origin: center;
+    cursor: pointer;
+}
+#timer{
+    width: 30vw;
+    height: 1px;
+    border: 1px solid rgb(53, 53, 53);
+    background-color:rgb(53, 53, 53) ;
+    cursor: pointer;
 }
 #lib_head{
     justify-content: space-between;
@@ -313,10 +329,12 @@
     position: relative;
     cursor: pointer;
 }
+
 .img_fit1{
     width: 12vw ;
     height: 20vh ;
     border-radius: 10px;
+    margin: auto;
 }
 .img_fit1 img{
     width: 100%;
@@ -339,16 +357,19 @@
     margin: 1vh 1vh;
     padding: 1vh;
     border-radius: 5px;
-    background-color: r(17, 17, 17);
+    background-color: rgb(17, 17, 17);
     position: relative;
     cursor: pointer;
 }
-
+.card3 p{
+   color: rgb(183, 180, 180);
+}
 .img_fit2{
     width: 12vw ;
     height: 20vh ;
     border-radius: 50%;
     border: 1px solid black;
+    margin: auto;
    
 
 }
@@ -369,18 +390,58 @@
     padding: 0;
     font-size: 12px;
     flex-wrap: wrap;
+    color: rgb(183, 180, 180);
 }
 
 .empty2{
     height: 3vh;
     background-color: rgb(17, 17, 17);
 }
+.playbtn{
+    width: 6vh;
+    height: 6vh;
+    position: absolute;
+    top:18vh;
+    right: 2vh ;
+    opacity:0;
+    transition: all 0.25s ease-in;
+}
+.stline{
+    width: 64vw;
+    height: 1px;
+    border: 1px solid rgb(53, 53, 53);
+    background-color:rgb(53, 53, 53) ;
+    margin: auto;
+    border-radius: 5px;
+    margin-top:5vw;
+    margin-bottom:5vw;
+
+}
+.implinks{
+    justify-content: space-around;
+}
+.implinks div a {
+    text-decoration: none;
+    color:rgb(183, 180, 180);
+    margin: 1vh 0;
+    font-size: 1vw;
+}
+.social{
+    gap: 1vw;
+    margin-top: 1vw;
+}
+.socialbox{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: rgb(35, 34, 34);
+}
 
 
 /* footer playbar  */
 .playbar{
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
     background-color: black ;
     position: fixed;
     bottom: 0;
@@ -390,11 +451,69 @@
 .songbtns{
     justify-content: center;
     gap: 5vh;
-    margin: 1vw;
+    margin-bottom: 1vw;
 }
 .looklikeplay{
     justify-content: center;
+    margin-top: 0;
+    padding: 0;
+   
 }
+ .songinfo{
+    gap: 1vh;
+    margin: 0;
+    padding: 0;
+} 
+.songinfo p{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+.songinfo h5{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.playbarinside{
+    margin: 1vh;
+    gap: 5vw;
+    justify-content: space-between;
+}
+.playbarleft{
+    margin-left: 3vw;
+    justify-content: center;
+    gap: 2vh;
+    
+
+}
+.img_fit3{
+    width: 8vh;
+    height: 8vh;
+    border: 1px solid rgb(73, 72, 72);
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.img_fit3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.sound{
+    margin-right: 7vw;
+    gap: 1vh;
+}
+.soundcontrol{
+    width: 8vw;
+    height: 1px;
+    border: 1px solid rgb(53, 53, 53);
+    background-color:rgb(53, 53, 53) ;
+    cursor: pointer;
+}
+
+
 
 
 
@@ -419,14 +538,14 @@ body{
 .card2:hover {
     background-color: rgb(70, 69, 69);
 }
-.card2:hover #playbtn {
+.card2:hover .playbtn {
     top: 14vh;
     opacity: 1;
 }
  .card3:hover{
     background-color:rgb(70, 69, 69) ;
  }
- .card3:hover #playbtn {
+ .card3:hover .playbtn {
     top: 14vh;
     opacity: 1;
 }
@@ -478,3 +597,17 @@ body{
 #parent_plus:hover{
     background-color: rgb(54, 54, 55);
 }
+.songinfo h5:hover{
+    text-decoration: underline;
+}
+.songinfo p:hover{
+    text-decoration: underline;
+}
+.implinks div a:hover{
+    text-decoration: underline;
+    color: white;
+}
+.socialbox:hover{
+    background-color: rgb(54, 54, 55);
+}
+
